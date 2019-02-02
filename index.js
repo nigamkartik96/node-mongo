@@ -22,6 +22,11 @@ let userSchema = new mongoose.Schema({
 
 let User = mongoose.model('User', userSchema);
 
+app.get('/welcome', (req, res) => {
+   console.log('Hello World!');
+   res.send('Hello, World!');
+});
+
 app.get('/getAll', (req, res) => {
     let name = req.query.name;
     console.log(req.query.name);
